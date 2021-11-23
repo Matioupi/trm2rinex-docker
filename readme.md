@@ -192,10 +192,11 @@ both devices were equipped with 32GB of RAM and running DSM 7.0.1. While possibl
 ## Wish list
 
 In case some Trimble folks are reading these lines, I'd love if they could make this repository obsolete by providing command line versions of their tools for various operating systems and architectures (x86, x86_64, ARM, ARM64).  
-Other wishes :
-- Adding an option to set a start and/or time (trimming away extra-data)
+Other wishes to Trimble:
+- Add an option to set a start and/or time (trimming away extra-data)
 - Mixed navigation output for RINEX 3.xx
 - Rinex 3.xx conventions auto naming scheme
+- Provide a decent documentation for the command line options (e.g. for the antenna height corrections)
 
 ## Credits and License
 
