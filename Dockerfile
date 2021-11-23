@@ -213,7 +213,7 @@ COPY download_mono.sh /tmp/download_mono.sh
 ADD --chown=${USER_UID}:${USER_GID} https://dl.trimble.com/osg/survey/gpsconfigfiles/21.9.27/trimblecfgupdate.exe /tmp
 ADD --chown=${USER_UID}:${USER_GID} https://trl.trimble.com/dscgi/ds.py/Get/File-869391/convertToRinex314.msi /tmp
 
-RUN chmod 644 /tmp/download_mono.sh \
+RUN chmod 755 /tmp/download_mono.sh \
     && /tmp/download_mono.sh "$([[ "$(${WINE_INSTALL_PREFIX}/bin/wine --version)" =~ .*([0-9]{1}.[0-9]{2}) ]] &&  echo ${BASH_REMATCH[1]})" 
     
 RUN useradd --shell /bin/bash --uid "${USER_UID}" --gid "${USER_GID}" --password "$(openssl passwd -1 -salt "$(openssl rand -base64 6)" ${USER_PASSWD})" --create-home --home-dir "/home/${USER_NAME}" "${USER_NAME}" \
@@ -228,7 +228,7 @@ RUN wine /tmp/trimblecfgupdate.exe /s /x /b"Z:\\tmp" /v"/qn" 2>/dev/null \
 
 USER root
 COPY clean.sh /home/${USER_NAME}/clean.sh
-RUN chmod 644 /home/${USER_NAME}/clean.sh
+RUN chmod 755 /home/${USER_NAME}/clean.sh
 RUN rm -rf /home/${USER_NAME}/.wine/drive_c/windows/Installer \
     && rm -rf /tmp/* \
     && /home/${USER_NAME}/clean.sh ${USER_NAME} ${WINE_INSTALL_PREFIX}
@@ -266,7 +266,7 @@ RUN dpkg --add-architecture i386 \
     && rm -rf /var/lib/apt/lists/* 
       
 COPY entrypoint.sh /usr/bin/entrypoint
-RUN chmod 644 /usr/bin/entrypoint
+RUN chmod 755 /usr/bin/entrypoint
 COPY --from=stage2 --chown=${USER_UID}:${USER_GID} /home/${USER_NAME}/.wine /home/${USER_NAME}/.wine
 
 USER ${USER_NAME}
