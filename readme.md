@@ -7,7 +7,7 @@ This repository provides material and instructions to build a docker image that 
 The Trimble utility can be found at official Trimble page : https://geospatial.trimble.com/trimble-rinex-converter
 
 **For intellectual property reasons, unless Trimble provides me with a written authorization to do so, I will not provide a pre-build docker image because it would contain the Trimble binaries and I'm not explicitely allowed to redistribute them.
-Even if no specific licence terms are displayed on Trimble page or when installing the software manually on a regular Windows machine.**
+Even if no specific license terms are displayed on Trimble page or when installing the software manually on a regular Windows machine.**
 
 The image has been successfully built and tested using [Wine 6.22](https://github.com/wine-mirror/wine/commit/986254d6c17ee1e5fb3aed6effcf2766bf1e787e) release and the following Trimble required binaries for version 3.14 of Trimble [convertToRinex](https://geospatial.trimble.com/trimble-rinex-converter) :
 
