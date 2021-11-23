@@ -1,0 +1,6 @@
+     3.04           N: GNSS NAV DATA    S: SBAS Payload     RINEX VERSION / TYPE
+cnvtToRINEX 3.14.0  trm2rinex-docker    20211123 113651 UTC PGM / RUN BY / DATE 
+----------------------------------------------------------- COMMENT             
+SBUT    0.931322574615D-09 0.266453525910D-14               CORR TO SYSTEM TIME 
+    18                                                      LEAP SECONDS        
+                                                            END OF HEADER       
