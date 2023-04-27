@@ -203,6 +203,6 @@ Other wishes to Trimble:
 - download_mono.sh script is almost copied from https://github.com/scottyhardy/docker-wine/blob/master/download_gecko_and_mono.sh
 and therefore licensed under the same MIT terms as well as the rest of this repository.
 
-- [Trimble convertToRinex](https://geospatial.trimble.com/trimble-rinex-converter) software is a property of Trimble compagny.
+- [Trimble convertToRinex](https://geospatial.trimble.com/trimble-rinex-converter) software is a property of Trimble company.
 
 
